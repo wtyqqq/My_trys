@@ -10,7 +10,7 @@ int main(void)
 	printf("    added     grain      ");
 	printf("US total\n");
 	total = current = 1.0;
-	printf("%4 %13.2e %12.2e %12.2e\n", count, current ,
+	printf("%4d %13.2e %12.2e %12.2e\n", count, current ,
 		total,total/CORP);
 	while (count < SQUARES)
 	{
