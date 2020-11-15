@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex1</title>
+</head>
+  <body>
+   <script>
+       function area()
+       {
+       var rad = form1.rad.value;
+       var pi = 3.14;
+       var area = parseFloat(rad) * parseFloat(pi) * parseFloat(rad);
+       document.getElementById("demo1").innerHTML= rad + "*" + rad + "*"+ "π" +"*"+"="+ area;
+       document.getElementById("demo2").innerHTML="The area of this cricle is"+area;
+       }
+    function cri()
+       {
+       var rad = form1.rad.value;
+       var pi = 3.14;
+       var cri = parseFloat(rad) * parseFloat(pi) * 2; 
+       document.getElementById("demo1").innerHTML= rad + "*" + rad + "*" + "π" + "=" + cri ;
+       document.getElementById("demo2").innerHTML="The circumference of this cricle is" + cri ;
+       }
+    function vol()
+       {
+       var rad = form1.rad.value;
+       var hei = form1.hei.value;
+       var pi = 3.14;
+       var vol = parseFloat(rad) * parseFloat(pi) * parseFloat(rad) * parseFloat(hei);
+       document.getElementById("demo1").innerHTML=rad + "*" + rad + "*" + "π" + "*" + hei + "=" + vol ; 
+       document.getElementById("demo2").innerHTML="The volume of this cylinder is"+ vol;
+       }
+   </script>
+   <form name="form1" action="">   
+       Radius:<input type="text" name="rad"/><br/>
+       Height:<input type="text" name="hei"/><br/>
+       <input type="button" value="area" onclick="area()"/>
+       <input type="button" value="cricumference" onclick="cri()"/>
+       <input type="button" value="volume" onclick="vol()"/>
+       <input type="reset" value="reset">
+   </form>
+   <p>
+       If you just want to calculate area or cricumference, you just need
+   to input the radius.
+   </p>
+   <br />
+   <p>
+       S=πr²
+       <br />
+       C=2πr
+       <br />
+       V = hπr2
+   </p>
+    <br/>
+   <p id="demo1"></p>
+   <p id="demo2"></p>
+  </body>
+</html>

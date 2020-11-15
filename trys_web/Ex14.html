@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex14</title>
+    </head>
+    <body>        
+        
+        <script>
+            var i = 0;
+            var arr=[Math.floor(Math.random()*100)];
+            while(i++<10)
+            {
+                arr[i]=[Math.floor(Math.random()*100)];
+            }
+            document.write(arr+"<br>"); 
+            document.write(arr.length+"<br>");
+            arr.sort();
+            document.write(arr+"<br>");
+            arr.sort(function(a,b){return a - b;});
+            document.write(arr+"<br>");      
+            arr.sort(function(a,b){return b - a;});
+            document.write(arr+"<br>"); 
+        </script>
+        <p id ="demo"></p>
+    </body>
+</html>

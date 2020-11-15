@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex17</title>
+    </head>
+    <body>        
+        <p>A basic bubble sort implementation</p>
+        <script>
+            var arr = [];
+            var i;
+            document.write("original array of random numbers <br>");
+            for(i = 0; i <= 500;i++)
+            {
+             var x = Math.floor(Math.random()*100) + 1;
+             arr[i - 1] =  x;
+             document.write(arr[i-1]+"*     ");
+            }
+            document.write("<br>array.length:"+ arr.length +"<br>");
+            document.write("unsorted array: <br>");
+            document.write(arr+"<br>");
+            var n = arr.length;
+            var temp;
+            for(var u = 0;u < n; u++)
+            {    
+                for(var j = 1; j< u;j++)
+                {
+                    if(arr[j-1] > arr[j])
+                    {
+                        temp = arr[j-1];
+                        arr[j-1] = arr[j];
+                        arr[j]=temp;
+                    }
+                }
+            }
+            document.write("sorted array: <br>");
+            document.write(arr+"<br>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex16</title>
+    </head>
+    <body>        
+        
+        <script>
+            var r =0;
+            var n = 10;
+            var k = 6;
+            var arr=[1];
+            var i = 0;
+            var rdc;
+            var tmp;
+            var opt = Array(k);
+            while(r++ < n - 1)
+            {
+                arr[r] = r+1;
+            }
+            var i = 0;
+            var rdc;
+            while(i++ < k)
+            {
+                rdc = Math.floor(Math.random()*(11 - i));
+                opt[i - 1] = arr[rdc];
+                tmp = arr[rdc];
+                arr[rdc] = arr[10 - i];
+                arr[10 - i] = tmp;
+            }
+            document.write(opt);
+        </script>
+    </body>
+</html>
