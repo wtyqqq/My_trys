@@ -6,9 +6,9 @@ int main(void)
 	int i;
 
 	printf("Please enter a word:\n");
-	while (scanf_s("%s", letters ) == 1)
+	while (scanf_s("%s",&letters ) == 1)
 	{
-		for (i = strlen(letters) - 1; i >= 0; i--) 
+		for (; i >= 0; i--) 
 		{
 			printf("%c", letters[i]);
 		}
